@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import qaSlice from '../features/qa/qaSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    qa: qaSlice,
   },
 });
