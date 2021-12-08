@@ -1,5 +1,5 @@
 ## Note
-I am still testing the app so I might be pushing changes today and tomorrow.
+I am still testing the app so I will be pushing changes as soon as possible.
 
 ## Available Scripts
 
