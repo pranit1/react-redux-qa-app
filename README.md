@@ -1,3 +1,6 @@
+## Note
+I am still testing the app so I might be pushing changes today and tomorrow.
+
 ## Available Scripts
 
 In the project directory, you can run:
