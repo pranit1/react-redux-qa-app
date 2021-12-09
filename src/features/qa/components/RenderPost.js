@@ -28,10 +28,10 @@ export const RenderPost = ({ post }) => {
                             data-testid="post-div" 
                             onClick={() => setActive(!isActive)}
                             onKeyPress={(e) => {if(e.key==='Enter') {setActive(!isActive)}}}
-                            tabindex="0" 
+                            tabIndex="0" 
                             role="button" 
                             aria-pressed="false">
-                            <article className="post-article">
+                            <article data-testid="post-article" className="post-article">
                                 <Typography 
                                     data-testid={`post-question-${post.id}`} 
                                     textAlign="center" variant="subtitle1" 

@@ -63,7 +63,7 @@ export const QaPosts = () => {
       
       <Grid container direction="column" rowSpacing={2}>
         {posts.length > 0 ?
-          posts.map(post => <RenderPost key={post.id} post={post}/>):
+          posts.map(post => <RenderPost data-testid="render-posts" key={post.id} post={post}/>):
           (<Typography 
             sx={{color:'#dd5c5c'}}
             className="no-questions-output"
