@@ -24,13 +24,14 @@ export const QaPosts = () => {
           <Grid item xs={12} >
             <Divider/>
             <Typography 
-            className="number-of-posts"
-            variant="subtitle2" 
-            component="div"
-            data-testid="number-of-questions"
-            gutterBottom>
+              className="number-of-posts"
+              variant="subtitle2" 
+              component="div"
+              data-testid="number-of-questions"
+              gutterBottom
+            >
               Here you can find {posts.length} questions. Feel Free to create your own
-              </Typography>
+            </Typography>
             <Divider/>
           </Grid>
           <Grid item xs={12} >

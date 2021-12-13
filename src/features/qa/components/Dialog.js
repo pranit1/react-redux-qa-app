@@ -45,7 +45,7 @@ const FormDialog = ({ open, handleClose, post}) => {
             name="question"
             className="edit-question"
             variant="outlined"
-            data-testid="edit-question"
+            inputProps={{ "data-testid": "edit-question" }}
             value={question}
             sx={{bgcolor:'white'}}
             onChange={onTitleChanged}
