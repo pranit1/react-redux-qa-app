@@ -1,6 +1,8 @@
 ## Note
 ~~I am still testing the app so I will be updating those as soon as possible.~~
-Finished basic testing of the app.
+
+
+Completed basic testing of the app.
 ## Available Scripts
 
 In the project directory, you can run:
