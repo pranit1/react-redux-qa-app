@@ -1,8 +1,7 @@
-## Note
-~~I am still testing the app so I will be updating those as soon as possible.~~
+## Redux React QA app
+A simple Q/A page that allows you to post Q/A and render it dynamically.
 
 
-Completed basic testing of the app.
 ## Available Scripts
 
 In the project directory, you can run:
