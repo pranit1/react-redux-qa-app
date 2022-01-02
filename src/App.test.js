@@ -3,7 +3,6 @@ import { render, screen } from './setupTests'
 import App from './App'
 import userEvent from '@testing-library/user-event'
 import {within} from '@testing-library/dom'
-import { act } from 'react-dom/test-utils'
 
 test('Should render the app', async () => {
   render(<App />)

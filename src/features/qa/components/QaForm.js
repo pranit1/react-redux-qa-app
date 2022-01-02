@@ -21,8 +21,8 @@ export const QaForm = () => {
   const dispatch = useDispatch()
   const [addRequestStatus, setAddRequestStatus] = useState('idle')
 
-  const onTitleChanged = e => setQuestion(e.target.value)
-  const onContentChanged = e => setAnswer(e.target.value)
+  const onQuestionChanged = e => setQuestion(e.target.value)
+  const onAnswerChanged = e => setAnswer(e.target.value)
   const canSave = [question, answer].every(Boolean) && addRequestStatus === 'idle'
 
 const onSaveAsyncPostClicked = async () => {
@@ -82,7 +82,7 @@ const onSaveAsyncPostClicked = async () => {
                   inputProps={{ "data-testid": "input-question" }}
                   value={question}
                   sx={{bgcolor:'white'}}
-                  onChange={onTitleChanged}
+                  onChange={onQuestionChanged}
                 />
               </Grid>
               <Grid item xs={12} >
@@ -96,7 +96,7 @@ const onSaveAsyncPostClicked = async () => {
                   value={answer}
                   data-testid="input-answer"
                   minRows={6}
-                  onChange={onContentChanged}
+                  onChange={onAnswerChanged}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -115,6 +115,9 @@ const onSaveAsyncPostClicked = async () => {
                     id="delay"
                     name="delay"
                     data-testid="delay-checkbox"
+                    inputProps={{
+                      'aria-label': 'Checkbox delay',
+                    }}
                   />
                   <label htmlFor="delay">delay</label>
                 </span>

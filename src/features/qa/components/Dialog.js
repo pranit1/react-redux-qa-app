@@ -16,8 +16,8 @@ const FormDialog = ({ open, handleClose, post}) => {
     const [answer, setAnswer] = useState(post.answer)
   
     const dispatch = useDispatch()
-    const onTitleChanged = e => setQuestion(e.target.value)
-    const onContentChanged = e => setAnswer(e.target.value)
+    const onQuestionChanged = e => setQuestion(e.target.value)
+    const onAnswerChanged = e => setAnswer(e.target.value)
   
     const onSavePostClicked = () => {
       if (question && answer) {
@@ -48,7 +48,7 @@ const FormDialog = ({ open, handleClose, post}) => {
             inputProps={{ "data-testid": "edit-question" }}
             value={question}
             sx={{bgcolor:'white'}}
-            onChange={onTitleChanged}
+            onChange={onQuestionChanged}
           />
           <Typography textAlign="left" variant="subtitle1" component="div" gutterBottom>
             Answer
@@ -61,7 +61,7 @@ const FormDialog = ({ open, handleClose, post}) => {
             data-testid="edit-answer"
             className="edit-answer"
             minRows={6}
-            onChange={onContentChanged}
+            onChange={onAnswerChanged}
           />
         </DialogContent>
         <DialogActions>
