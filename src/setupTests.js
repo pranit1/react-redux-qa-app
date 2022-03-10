@@ -2,33 +2,36 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 // test-utils.jsx
-import React from 'react'
-import { render as rtlRender } from '@testing-library/react'
-import { configureStore } from '@reduxjs/toolkit'
-import { Provider } from 'react-redux'
+import React from "react";
+import { render as rtlRender } from "@testing-library/react";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
 // Import your own reducer
-import qaSlice from './features/qa/qaSlice'
+import qaSlice from "./features/qa/qaSlice";
 
 function render(
   ui,
   {
     preloadedState,
-    store = configureStore({reducer: {
+    store = configureStore({
+      reducer: {
         qa: qaSlice,
-      }, preloadedState }),
+      },
+      preloadedState,
+    }),
     ...renderOptions
   } = {}
 ) {
   function Wrapper({ children }) {
-    return <Provider store={store}>{children}</Provider>
+    return <Provider store={store}>{children}</Provider>;
   }
-  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
+  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
 }
 
 // re-export everything
-export * from '@testing-library/react'
+export * from "@testing-library/react";
 // override render method
-export { render }
+export { render };
 jest.setTimeout(10000);
